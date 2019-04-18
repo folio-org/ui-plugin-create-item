@@ -1,0 +1,11 @@
+.createItemModal {
+  min-height: 400px;
+}
+
+.createItemError {
+  color: red
+}
+
+.createItemModal form > [class^="paneset---"] {
+  overflow: scroll;
+}
