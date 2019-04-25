@@ -1,5 +1,5 @@
 {
-    "error.noHolding": "No holding for selected location is available for the instance",
-    "error.onSave": "Item can't be created",
-    "meta.title": "Create item (plugin)"
+    "error.noHolding": "Nenhum holding para o local selecionado está disponível para a instância",
+    "error.onSave": "Item não pode ser criado",
+    "meta.title": "Criar item (plugin)"
 }
