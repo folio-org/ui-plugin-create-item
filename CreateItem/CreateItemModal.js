@@ -145,14 +145,14 @@ export default class CreateItemModal extends React.Component {
     mutator: PropTypes.object,
     onCloseModal: PropTypes.func,
     openWhen: PropTypes.bool,
-    dataKey: PropTypes.string,
+    dataKey: PropTypes.string.isRequired,
     resources: PropTypes.object,
   }
 
   constructor(props) {
     super(props);
 
-    this.connectedApp = props.stripes.connect(ItemForm);
+    this.connectedApp = props.stripes.connect(ItemForm, { dataKey: props.dataKey });
 
     this.state = {
       error: null,

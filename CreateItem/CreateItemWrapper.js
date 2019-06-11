@@ -10,7 +10,7 @@ export default class CreateItemWrapper extends React.Component {
   constructor(props) {
     super(props);
 
-    this.connectedCreateItemModal = props.stripes.connect(CreateItemModal);
+    this.connectedCreateItemModal = props.stripes.connect(CreateItemModal, { dataKey: props.dataKey });
   }
 
   state = {
@@ -63,11 +63,13 @@ export default class CreateItemWrapper extends React.Component {
 }
 
 CreateItemWrapper.defaultProps = {
+  dataKey: 'createItem',
   disabled: false,
   searchButtonStyle: 'primary noRightRadius',
 };
 
 CreateItemWrapper.propTypes = {
+  dataKey: PropTypes.string,
   disabled: PropTypes.bool,
   searchLabel: PropTypes.node,
   searchButtonStyle: PropTypes.string,
