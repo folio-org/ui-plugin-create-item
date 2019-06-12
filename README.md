@@ -24,6 +24,7 @@ of the Module Developer's Guide.
 | `stripes` | object | stripes-core glue object | Yes |
 | `searchButtonStyle` | string | optional styling of plugin's button | No |
 | `searchLabel` | React.node | optional jsx for plugin's button label | No |
+| `dataKey` | string | dataKey passed to stripes/connect when creating the connected component. | No |
 
 This is a [Stripes](https://github.com/folio-org/stripes-core/) UI module for creating item using code of ui-inventory.
 
