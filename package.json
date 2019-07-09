@@ -14,7 +14,7 @@
     "type": "plugin",
     "pluginType": "create-item",
     "okapiInterfaces": {
-      "inventory": "8.3",
+      "inventory": "8.3,9.0",
       "holdings-storage": "3.0",
       "loan-types": "2.2",
       "material-types": "2.2",
