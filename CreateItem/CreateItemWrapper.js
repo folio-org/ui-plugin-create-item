@@ -47,7 +47,6 @@ export default class CreateItemWrapper extends React.Component {
           key="searchButton"
           buttonStyle={searchButtonStyle}
           onClick={this.openModal}
-          tabIndex="-1"
         >
           {searchLabel || <Icon icon="search" color="#fff" />}
         </Button>

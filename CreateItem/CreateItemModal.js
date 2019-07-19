@@ -132,6 +132,15 @@ export default class CreateItemModal extends React.Component {
       records: 'holdingsRecords',
       path: 'holdings-storage/holdings?query=instanceId==!{instanceId} and permanentLocationId==!{locationId}',
     },
+    itemNoteTypes: {
+      type: 'okapi',
+      path: 'item-note-types',
+      params: {
+        query: 'cql.allRecords=1 sortby name',
+        limit: '1000',
+      },
+      records: 'itemNoteTypes',
+    },
   };
 
   static propTypes = {
@@ -201,6 +210,7 @@ export default class CreateItemModal extends React.Component {
       holdingsNoteTypes: get(resources, 'holdingsNoteTypes.records'),
       materialTypes: get(resources, 'materialTypes.records'),
       loanTypes: get(resources, 'loanTypes.records'),
+      itemNoteTypes: get(resources, 'itemNoteTypes.records'),
     };
 
     if (!resources
