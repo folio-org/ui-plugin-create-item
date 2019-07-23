@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-item",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Instance-create-item for Stripes",
   "repository": "folio-org/ui-plugin-create-item",
   "publishConfig": {
@@ -59,7 +59,7 @@
     "webpack": "^4.10.2"
   },
   "dependencies": {
-    "@folio/inventory": "^1.8.0",
+    "@folio/inventory": "^1.10.0",
     "classnames": "^2.2.5",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.0",
