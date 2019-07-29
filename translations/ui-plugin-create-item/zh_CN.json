@@ -1,5 +1,5 @@
 {
-    "error.noHolding": "No holding for selected location is available for the instance",
-    "error.onSave": "Item can't be created",
-    "meta.title": "Create item (plugin)"
+    "error.noHolding": "该实例无选定位置的馆藏",
+    "error.onSave": "无法创建单件",
+    "meta.title": "创建单件（插件）"
 }
