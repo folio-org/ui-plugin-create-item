@@ -141,6 +141,11 @@ export default class CreateItemModal extends React.Component {
       },
       records: 'itemNoteTypes',
     },
+    itemDamagedStatuses: {
+      type: 'okapi',
+      path: 'item-damaged-statuses?limit=1000&query=cql.allRecords=1 sortby name',
+      records: 'itemDamageStatuses',
+    },
   };
 
   static propTypes = {
@@ -211,6 +216,7 @@ export default class CreateItemModal extends React.Component {
       materialTypes: get(resources, 'materialTypes.records'),
       loanTypes: get(resources, 'loanTypes.records'),
       itemNoteTypes: get(resources, 'itemNoteTypes.records'),
+      itemDamagedStatuses: get(resources, 'itemDamagedStatuses.records'),
     };
 
     if (!resources
