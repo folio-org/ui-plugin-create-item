@@ -1,5 +1,11 @@
 # Change history for ui-plugin-create-item
 
+## [1.5.0](https://github.com/folio-org/ui-plugin-create-item/tree/v1.5.0) (In progress)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.4.0...v1.5.0)
+
+### Bug Fixes
+* [UIPCITEM-4](https://issues.folio.org/browse/UIPCITEM-4)
+
 ## [1.4.0](https://github.com/folio-org/ui-plugin-create-item/tree/v1.4.0) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.3.1...v1.4.0)
 
