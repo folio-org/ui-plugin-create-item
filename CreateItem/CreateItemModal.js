@@ -183,7 +183,7 @@ export default class CreateItemModal extends React.Component {
   onSubmit = (values) => {
     const { addItem, mutator } = this.props;
 
-    mutator.items.POST(values)
+    return mutator.items.POST(values)
       .then((item) => {
         addItem(item);
         this.closeModal();
