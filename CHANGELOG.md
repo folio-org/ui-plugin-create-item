@@ -5,6 +5,7 @@
 
 ### Stories
 * [UIREC-32](https://issues.folio.org/browse/UIREC-32) Add piece for a title
+* [UIPCITEM-5](https://issues.folio.org/browse/UIPCITEM-5) Update inventory okapiInterface to version `10.0`
 
 ## [1.4.1](https://github.com/folio-org/ui-plugin-create-item/tree/v1.4.1) (2019-12-30)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.4.0...v1.4.1)

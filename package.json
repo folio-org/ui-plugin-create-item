@@ -14,7 +14,7 @@
     "actsAs": ["plugin"],
     "pluginType": "create-item",
     "okapiInterfaces": {
-      "inventory": "9.4",
+      "inventory": "10.0",
       "instance-storage": "7.2",
       "holdings-storage": "4.0",
       "loan-types": "2.2",
