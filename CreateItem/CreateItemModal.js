@@ -4,14 +4,12 @@ import { get, keyBy, some } from 'lodash';
 import { FormattedMessage } from 'react-intl';
 
 import ItemForm from '@folio/inventory/src/edit/items/ItemForm';
-import {
-  Modal,
-  omitProps,
-} from '@folio/stripes/components';
+import { stripesConnect } from '@folio/stripes/core';
+import { Modal } from '@folio/stripes/components';
 
 import css from './CreateItemModal.css';
 
-export default class CreateItemModal extends React.Component {
+class CreateItemModal extends React.Component {
   static manifest = {
     identifierTypes: {
       type: 'okapi',
@@ -154,19 +152,16 @@ export default class CreateItemModal extends React.Component {
     }).isRequired,
     closeCB: PropTypes.func.isRequired,
     locationId: PropTypes.string.isRequired,
+    // instanceId prop is used in manifest
+    // eslint-disable-next-line react/no-unused-prop-types
     instanceId: PropTypes.string.isRequired,
     addItem: PropTypes.func.isRequired,
     mutator: PropTypes.object,
-    onCloseModal: PropTypes.func,
-    openWhen: PropTypes.bool,
-    dataKey: PropTypes.string.isRequired,
     resources: PropTypes.object,
   }
 
   constructor(props) {
     super(props);
-
-    this.connectedApp = props.stripes.connect(ItemForm, { dataKey: props.dataKey });
 
     this.state = {
       error: null,
@@ -192,7 +187,7 @@ export default class CreateItemModal extends React.Component {
   }
 
   render() {
-    const { resources } = this.props;
+    const { resources, stripes } = this.props;
     const { error } = this.state;
 
     const referenceTables = {
@@ -234,7 +229,6 @@ export default class CreateItemModal extends React.Component {
       permanentLocationId: this.props.locationId,
     };
     const instance = get(resources, 'instance.records.0', {});
-    const props = omitProps(this.props, ['resources', 'mutator', 'closeCB', 'locationId', 'instanceId']);
     const initialValues = {
       status: { name: 'On order' },
       holdingsRecordId: holdingsRecord.id,
@@ -256,8 +250,9 @@ export default class CreateItemModal extends React.Component {
               <FormattedMessage id={`ui-plugin-create-item.error.${errorKey}`} />
             </div>
           )}
-          <this.connectedApp
-            {...props}
+          <ItemForm
+            okapi={stripes.okapi}
+            stripes={stripes}
             onSubmit={this.onSubmit}
             initialValues={initialValues}
             referenceTables={referenceTables}
@@ -270,3 +265,5 @@ export default class CreateItemModal extends React.Component {
     );
   }
 }
+
+export default stripesConnect(CreateItemModal);
