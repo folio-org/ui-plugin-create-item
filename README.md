@@ -21,10 +21,8 @@ of the Module Developer's Guide.
 | `instanceId` | string | id of instance record from Inventory in scope of what user want to Create a new item record | Yes |
 | `locationId` | string | id of location record from Inventory, which is used to provide a corresponding holding for new item | Yes |
 | `disabled` | boolean | Flag to control `disable` property of plugin's button, since it's rendered inside the plugin | No |
-| `stripes` | object | stripes-core glue object | Yes |
 | `searchButtonStyle` | string | optional styling of plugin's button | No |
 | `searchLabel` | React.node | optional jsx for plugin's button label | No |
-| `dataKey` | string | dataKey passed to stripes/connect when creating the connected component. | No |
 
 This is a [Stripes](https://github.com/folio-org/stripes-core/) UI module for creating item using code of ui-inventory.
 

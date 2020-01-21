@@ -1,78 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Icon, omitProps } from '@folio/stripes/components';
 import className from 'classnames';
+
+import {
+  Button,
+  Icon,
+} from '@folio/stripes/components';
 
 import css from './CreateItemWrapper.css';
 import CreateItemModal from './CreateItemModal';
 
-export default class CreateItemWrapper extends React.Component {
-  constructor(props) {
-    super(props);
+const CreateItemWrapper = ({
+  addItem,
+  disabled,
+  instanceId,
+  locationId,
+  marginBottom0,
+  marginTop0,
+  searchButtonStyle,
+  searchLabel,
+}) => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
-    this.connectedCreateItemModal = props.stripes.connect(CreateItemModal, { dataKey: props.dataKey });
-  }
+  const toggleModal = () => setIsModalOpened(!isModalOpened);
 
-  state = {
-    openModal: false,
-  }
-
-  getStyle() {
-    const { marginBottom0, marginTop0 } = this.props;
-
+  const getStyle = () => {
     return className(
       css.searchControl,
       { [css.marginBottom0]: marginBottom0 },
       { [css.marginTop0]: marginTop0 },
     );
-  }
+  };
 
-  openModal = () => this.setState({
-    openModal: true,
-  });
-
-  closeModal = () => this.setState({
-    openModal: false,
-  });
-
-  render() {
-    const { disabled, searchButtonStyle, searchLabel } = this.props;
-    const props = omitProps(this.props, ['disabled', 'searchButtonStyle', 'searchLabel', 'marginBottom0', 'marginTop0']);
-
-    return (
-      <div className={this.getStyle()}>
-        <Button
-          data-test-add-item
-          disabled={disabled}
-          key="searchButton"
-          buttonStyle={searchButtonStyle}
-          onClick={this.openModal}
-        >
-          {searchLabel || <Icon icon="search" color="#fff" />}
-        </Button>
-        {this.state.openModal && (
-          <this.connectedCreateItemModal
-            closeCB={this.closeModal}
-            {...props}
-          />
-        )}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={getStyle}>
+      <Button
+        data-test-add-item
+        disabled={disabled}
+        key="searchButton"
+        buttonStyle={searchButtonStyle}
+        onClick={toggleModal}
+      >
+        {searchLabel || <Icon icon="search" color="#fff" />}
+      </Button>
+      {isModalOpened && (
+        <CreateItemModal
+          closeCB={toggleModal}
+          addItem={addItem}
+          locationId={locationId}
+          instanceId={instanceId}
+        />
+      )}
+    </div>
+  );
+};
 
 CreateItemWrapper.defaultProps = {
-  dataKey: 'createItem',
   disabled: false,
   searchButtonStyle: 'primary noRightRadius',
 };
 
 CreateItemWrapper.propTypes = {
-  dataKey: PropTypes.string,
+  addItem: PropTypes.func.isRequired,
+  instanceId: PropTypes.string.isRequired,
+  locationId: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   searchLabel: PropTypes.node,
   searchButtonStyle: PropTypes.string,
   marginBottom0: PropTypes.bool,
   marginTop0: PropTypes.bool,
-  stripes: PropTypes.object,
 };
+
+export default CreateItemWrapper;
