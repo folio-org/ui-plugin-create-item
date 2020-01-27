@@ -4,7 +4,10 @@ import { get, keyBy, some } from 'lodash';
 import { FormattedMessage } from 'react-intl';
 
 import ItemForm from '@folio/inventory/src/edit/items/ItemForm';
-import { stripesConnect } from '@folio/stripes/core';
+import {
+  stripesConnect,
+  stripesShape,
+} from '@folio/stripes/core';
 import { Modal } from '@folio/stripes/components';
 
 import css from './CreateItemModal.css';
@@ -146,20 +149,6 @@ class CreateItemModal extends React.Component {
     },
   };
 
-  static propTypes = {
-    stripes: PropTypes.shape({
-      connect: PropTypes.func.isRequired,
-    }).isRequired,
-    closeCB: PropTypes.func.isRequired,
-    locationId: PropTypes.string.isRequired,
-    // instanceId prop is used in manifest
-    // eslint-disable-next-line react/no-unused-prop-types
-    instanceId: PropTypes.string.isRequired,
-    addItem: PropTypes.func.isRequired,
-    mutator: PropTypes.object,
-    resources: PropTypes.object,
-  }
-
   constructor(props) {
     super(props);
 
@@ -265,5 +254,17 @@ class CreateItemModal extends React.Component {
     );
   }
 }
+
+CreateItemModal.propTypes = {
+  stripes: stripesShape.isRequired,
+  closeCB: PropTypes.func.isRequired,
+  locationId: PropTypes.string.isRequired,
+  // instanceId prop is used in manifest
+  // eslint-disable-next-line react/no-unused-prop-types
+  instanceId: PropTypes.string.isRequired,
+  addItem: PropTypes.func.isRequired,
+  mutator: PropTypes.object,
+  resources: PropTypes.object,
+};
 
 export default stripesConnect(CreateItemModal);

@@ -2,10 +2,10 @@
   "parser": "babel-eslint",
   "extends": "@folio/eslint-config-stripes",
   "plugins": [
-    "filenames",
-    "no-only-tests"
+    "filenames"
   ],
   "rules": {
+    "import/prefer-default-export": "off",
     "filenames/match-exported": "error",
     "key-spacing": [
       "error",
@@ -75,10 +75,6 @@
       "error",
       "tag-aligned"
     ],
-    "react/jsx-wrap-multilines": [
-      "error",
-      "parens-new-line"
-    ],
     "no-this-before-super": "error",
     "prefer-object-spread": "error",
     "jsx-quotes": [
@@ -116,7 +112,9 @@
       "error",
       3
     ],
-    "no-only-tests/no-only-tests": "error",
-    "no-constant-condition": "error"
+    "no-constant-condition": "error",
+    "react/state-in-constructor": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
