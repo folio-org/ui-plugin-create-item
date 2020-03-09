@@ -39,6 +39,7 @@ const CreateItemWrapper = ({
         disabled={disabled}
         key="searchButton"
         buttonStyle={searchButtonStyle}
+        marginBottom0={marginBottom0}
         onClick={toggleModal}
       >
         {searchLabel || <Icon icon="search" color="#fff" />}
