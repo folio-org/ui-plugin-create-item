@@ -1,9 +1,16 @@
 # Change history for ui-plugin-create-item
 
-## [1.5.0](https://github.com/folio-org/ui-plugin-create-item/tree/v1.5.0) (in progress)
-[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.4.1...v1.5.0)
+## (IN PROGRESS)
 
 ### Stories
+
+## [2.0.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.0) (2020-03-13)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.4.1...v2.0.0)
+
+* bump the @folio/stripes peer to v3.0.0
+
+### Stories
+* [UIPCITEM-6](https://issues.folio.org/browse/UIPCITEM-6) Security update eslint to >= 6.2.1 or eslint-util >= 1.4.1
 * [UIREC-32](https://issues.folio.org/browse/UIREC-32) Add piece for a title
 * [UIPCITEM-5](https://issues.folio.org/browse/UIPCITEM-5) Update inventory okapiInterface to version `10.0`
 
