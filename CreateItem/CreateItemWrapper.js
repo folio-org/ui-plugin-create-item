@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import className from 'classnames';
 
 import {
   Button,
   Icon,
 } from '@folio/stripes/components';
 
-import css from './CreateItemWrapper.css';
 import CreateItemModal from './CreateItemModal';
 
 const CreateItemWrapper = ({
@@ -16,7 +14,6 @@ const CreateItemWrapper = ({
   instanceId,
   locationId,
   marginBottom0,
-  marginTop0,
   searchButtonStyle,
   searchLabel,
 }) => {
@@ -24,16 +21,8 @@ const CreateItemWrapper = ({
 
   const toggleModal = () => setIsModalOpened(!isModalOpened);
 
-  const getStyle = () => {
-    return className(
-      css.searchControl,
-      { [css.marginBottom0]: marginBottom0 },
-      { [css.marginTop0]: marginTop0 },
-    );
-  };
-
   return (
-    <div className={getStyle}>
+    <div>
       <Button
         data-test-add-item
         disabled={disabled}
@@ -64,12 +53,11 @@ CreateItemWrapper.defaultProps = {
 CreateItemWrapper.propTypes = {
   addItem: PropTypes.func.isRequired,
   instanceId: PropTypes.string.isRequired,
-  locationId: PropTypes.string.isRequired,
+  locationId: PropTypes.string,
   disabled: PropTypes.bool,
   searchLabel: PropTypes.node,
   searchButtonStyle: PropTypes.string,
   marginBottom0: PropTypes.bool,
-  marginTop0: PropTypes.bool,
 };
 
 export default CreateItemWrapper;
