@@ -258,7 +258,7 @@ class CreateItemModal extends React.Component {
 CreateItemModal.propTypes = {
   stripes: stripesShape.isRequired,
   closeCB: PropTypes.func.isRequired,
-  locationId: PropTypes.string.isRequired,
+  locationId: PropTypes.string,
   // instanceId prop is used in manifest
   // eslint-disable-next-line react/no-unused-prop-types
   instanceId: PropTypes.string.isRequired,
