@@ -4,6 +4,11 @@
 
 ### Stories
 
+## [2.0.1](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.0) (2020-04-06)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.0.0...v2.0.1)
+
+* remove console warnings
+
 ## [2.0.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.0) (2020-03-13)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v1.4.1...v2.0.0)
 
