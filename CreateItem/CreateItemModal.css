@@ -3,7 +3,9 @@
 }
 
 .createItemError {
-  color: red
+  position: absolute;
+  top: 59px;
+  z-index: 1;
 }
 
 .createItemModal form > [class^="paneset---"] {
