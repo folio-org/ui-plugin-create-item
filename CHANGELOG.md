@@ -2,7 +2,8 @@
 
 ## (IN PROGRESS)
 
-### Stories
+### Bug fixes
+* [UIREC-78](https://issues.folio.org/browse/UIREC-78) Fill PO Line id on create Item request from Add Item modal
 
 ## [2.0.1](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.1) (2020-04-06)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.0.0...v2.0.1)

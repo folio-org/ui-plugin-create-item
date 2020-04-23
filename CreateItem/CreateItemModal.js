@@ -38,8 +38,10 @@ const CreateItemModal = ({
         callout.sendCallout({ message: <FormattedMessage id="ui-plugin-create-item.success.onSave" /> });
         closeCB();
       })
-      .catch(() => setError('onSave'))
-      .finally(setIsLoading);
+      .catch(() => {
+        setError('onSave');
+        setIsLoading(false);
+      });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [addItem, closeCB]);
 
