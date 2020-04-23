@@ -88,6 +88,7 @@ const CreateItemModal = ({
 
   return (
     <Modal
+      contentClass={css.createItemModalWrapper}
       dismissible
       label=""
       onClose={closeCB}
