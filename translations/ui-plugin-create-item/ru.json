@@ -1,5 +1,6 @@
 {
     "error.noHolding": "No holding for selected location is available for the instance",
     "error.onSave": "Элемент не может быть создан",
-    "meta.title": "Create item (plugin)"
+    "meta.title": "Create item (plugin)",
+    "success.onSave": "Издание было успешно сохранено"
 }
