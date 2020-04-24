@@ -3,9 +3,12 @@
 }
 
 .createItemError {
-  color: red
+  position: absolute;
+  top: 44px;
+  z-index: 1;
 }
 
-.createItemModal form > [class^="paneset---"] {
-  overflow: scroll;
+.createItemModalWrapper {
+  padding-left: 0;
+  padding-top: 0;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -12,14 +12,15 @@ const CreateItemWrapper = ({
   addItem,
   disabled,
   instanceId,
+  itemToSave,
   locationId,
   marginBottom0,
   searchButtonStyle,
   searchLabel,
 }) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
-
-  const toggleModal = () => setIsModalOpened(!isModalOpened);
+  const openModal = useCallback(() => setIsModalOpened(true), []);
+  const closeModal = useCallback(() => setIsModalOpened(false), []);
 
   return (
     <div>
@@ -29,16 +30,17 @@ const CreateItemWrapper = ({
         key="searchButton"
         buttonStyle={searchButtonStyle}
         marginBottom0={marginBottom0}
-        onClick={toggleModal}
+        onClick={openModal}
       >
         {searchLabel || <Icon icon="search" color="#fff" />}
       </Button>
       {isModalOpened && (
         <CreateItemModal
-          closeCB={toggleModal}
+          closeCB={closeModal}
           addItem={addItem}
           locationId={locationId}
           instanceId={instanceId}
+          itemToSave={itemToSave}
         />
       )}
     </div>
@@ -47,17 +49,19 @@ const CreateItemWrapper = ({
 
 CreateItemWrapper.defaultProps = {
   disabled: false,
+  itemToSave: {},
   searchButtonStyle: 'primary noRightRadius',
 };
 
 CreateItemWrapper.propTypes = {
   addItem: PropTypes.func.isRequired,
-  instanceId: PropTypes.string.isRequired,
+  instanceId: PropTypes.string,
   locationId: PropTypes.string,
   disabled: PropTypes.bool,
   searchLabel: PropTypes.node,
   searchButtonStyle: PropTypes.string,
   marginBottom0: PropTypes.bool,
+  itemToSave: PropTypes.object,
 };
 
 export default CreateItemWrapper;
