@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+## [2.0.2](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.2) (2020-04-25)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.0.1...v2.0.2)
+
 ### Bug fixes
 * [UIREC-78](https://issues.folio.org/browse/UIREC-78) Fill PO Line id on create Item request from Add Item modal
 
