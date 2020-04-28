@@ -2,5 +2,5 @@
     "error.noHolding": "No hay fondos disponibles en la instancia para la localización seleccionada",
     "error.onSave": "El item no puede ser creado",
     "meta.title": "Crear item (plugin)",
-    "success.onSave": "The Item has been successfully saved"
+    "success.onSave": "El Ítem ha sido exitosamente guardado"
 }
