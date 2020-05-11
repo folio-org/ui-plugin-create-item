@@ -1,6 +1,8 @@
 # Change history for ui-plugin-create-item
 
 ## (IN PROGRESS)
+### Stories
+* [UIPCITEM-10](https://issues.folio.org/browse/UIPCITEM-10) Update to Stripes v4
 
 ## [2.0.2](https://github.com/folio-org/ui-plugin-create-item/tree/v2.0.2) (2020-04-25)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.0.1...v2.0.2)
