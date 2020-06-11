@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-item",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Instance-create-item for Stripes",
   "repository": "folio-org/ui-plugin-create-item",
   "publishConfig": {
@@ -8,7 +8,7 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=10"
   },
   "stripes": {
     "actsAs": ["plugin"],

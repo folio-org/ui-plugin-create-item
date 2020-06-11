@@ -43,7 +43,7 @@ const CreateItemModal = ({
         setIsLoading(false);
       });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [addItem, closeCB]);
+  }, [addItem, callout, closeCB]);
 
   const referenceTables = {
     contributorTypes: get(resources, 'contributorTypes.records'),
