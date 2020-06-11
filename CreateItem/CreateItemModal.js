@@ -35,7 +35,7 @@ const CreateItemModal = ({
     return mutator.items.POST(values)
       .then((item) => {
         addItem(item);
-        callout.sendCallout({ message: <FormattedMessage id="ui-plugin-create-item.success.onSave" /> });
+        if (callout && callout.sendCallout) callout.sendCallout({ message: <FormattedMessage id="ui-plugin-create-item.success.onSave" /> });
         closeCB();
       })
       .catch(() => {
