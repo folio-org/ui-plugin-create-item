@@ -2,6 +2,11 @@
 
 ## (IN PROGRESS)
 
+## [2.2.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.2.0) (2020-10-09)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.1.0...v2.2.0)
+
+* bump the @folio/stripes peer to v5.0.0
+
 ## [2.1.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.1.0) (2020-06-11)
 [Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.0.2...v2.1.0)
 
