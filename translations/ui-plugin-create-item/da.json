@@ -1,6 +1,6 @@
 {
     "error.noHolding": "No holding for selected location is available for the instance",
-    "error.onSave": "Item can't be created",
+    "error.onSave": "Eksemplar kan ikke oprettes",
     "meta.title": "Create item (plugin)",
-    "success.onSave": "The Item has been successfully saved"
+    "success.onSave": "Eksemplaret er blevet gemt"
 }
