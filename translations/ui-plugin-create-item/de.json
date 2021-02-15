@@ -1,5 +1,5 @@
 {
-    "error.noHolding": "No holding for selected location is available for the instance",
+    "error.noHolding": "Für die Instanz ist kein Bestand am ausgewählten Standort verfügbar",
     "error.onSave": "Exemplar kann nicht erstellt werden",
     "meta.title": "Exemplar erstellen (plugin)",
     "success.onSave": "Exemplar wurde erfolgreich gespeichert"
