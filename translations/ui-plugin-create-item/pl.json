@@ -1,6 +1,6 @@
 {
-    "error.noHolding": "No holding for selected location is available for the instance",
-    "error.onSave": "Item can't be created",
-    "meta.title": "Create item (plugin)",
-    "success.onSave": "The Item has been successfully saved"
+    "error.noHolding": "Dla instancji nie jest dostępny żaden zasób dla wybranej lokalizacji",
+    "error.onSave": "Nie można utworzyć egzemplarza",
+    "meta.title": "Utwórz egzemplarz (wtyczka)",
+    "success.onSave": "Egzemplarz został pomyślnie zapisany"
 }
