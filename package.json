@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-create-item",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Instance-create-item for Stripes",
   "repository": "folio-org/ui-plugin-create-item",
   "publishConfig": {

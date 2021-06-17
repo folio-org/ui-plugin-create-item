@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+## [2.3.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.3.0) (2021-06-17)
+[Full Changelog](https://github.com/folio-org/ui-plugin-create-item/compare/v2.2.0...v2.3.0)
+
 * Add personal data disclosure form. Refs UIPCITEM-15.
 
 ## [2.2.0](https://github.com/folio-org/ui-plugin-create-item/tree/v2.2.0) (2020-10-09)
